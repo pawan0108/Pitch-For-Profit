@@ -1,0 +1,63 @@
+.news-page {
+    background: #f4f4f4;
+    min-height: 100vh;
+    padding: 40px 15px;
+  }
+  
+  /* Outer container that clips overflow */
+  .marquee-outer {
+    height: 650px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Inner scrolling content (double length) */
+  .marquee-inner {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-vertical 70s linear infinite;
+  }
+  
+  /* Individual card */
+  .news-card {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .news-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .news-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .news-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Keyframes to scroll smoothly and loop seamlessly */
+  @keyframes scroll-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  
+  /* Optional: Pause on hover */
+  .marquee-outer:hover .marquee-inner {
+    animation-play-state: paused;
+  }

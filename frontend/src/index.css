@@ -1,0 +1,190 @@
+/* .home-nav{
+  height: 200px;
+  background: #c0f3c8;
+
+  width: 100%;
+}
+
+.nav-dropdown{
+  background: #c0f3c8;
+}
+
+.nav-dropdown li .dropdown-item:hover{
+  background-color: #259e2b;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #f8f9fa;
+ margin-right: 3rem;
+    border-radius: 10px;
+    text-align: end;
+    margin-top: -3rem;
+  }
+}
+
+.profile-img{
+  width: 400px;
+  height: 400px;
+} */
+
+@media (max-width: 991px) {
+  .container-fluid .profile-img{
+    height: 350px;
+    width: 400px;
+    margin-right: 100px;
+  }
+
+}
+
+
+@media (max-width: 575px) {
+    .register{
+      margin-top: 1rem;
+    }
+}
+/* 
+.nav-hover:hover{
+ background-color: #259e2b;
+ border-radius: 8px;
+ padding-left: 10px;
+} */
+
+  .freedom{
+    background-color: #3C6E81;
+    color: white;
+  }
+
+
+  .freedom-img{
+    width: 255px;
+    height: 384px;
+  }
+  .image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 32px;
+    border-radius: 10px;
+  }
+
+
+  @media (max-width: 991px) {
+    .freedom-img{
+      margin-right: 60px;
+    }
+  
+  }
+  
+  
+  .btn-custom {
+    background-color: #396d80;
+    color: #fff;
+    transition: 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: #dd5736;
+    color: #fff;
+  }
+
+  .masterclass{
+    height: 100%;
+    width: 100%;
+  }
+  
+
+  .quiz-section {
+    background-color: #f9f9f9;
+  }
+  
+  .section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #3b6573;
+  }
+  
+  .btn-quiz {
+    background-color: #3b6573;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    transition: 0.3s;
+  }
+  
+  .btn-quiz:hover {
+    background-color: #2d4e58;
+    color: white;
+  }
+  
+  .quiz-image-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .quiz-image {
+    width: 100%;
+    height: 280px;
+
+    position: relative;
+    z-index: 1;
+  }
+  
+
+  /* .login{
+    height: 800px;
+  }
+
+  .login-white{
+background-color: white;
+
+  } */
+
+  /* investor */
+
+  /* InvestorDashboard.css */
+
+.summary-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.card-text {
+  color: #6c757d;
+}
+
+h2 {
+  font-weight: bold;
+  color: #343a40;
+}
+
+button {
+  font-weight: 500;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#feedback-section {
+  scroll-margin-top: 100px; /* navbar height */
+}

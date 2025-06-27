@@ -1,0 +1,38 @@
+.inv-page {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .inv-form {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .inv-form h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .inv-form .form-control,
+  .inv-form .form-select {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .inv-form .form-control:focus {
+    border-color: #4dd0e1;
+    box-shadow: 0 0 8px #4dd0e1;
+  }
+  
+  /* .inv-form .btn-success {
+    border-radius: 12px;
+    font-weight: 600;
+    background: #00796b;
+    border: none;
+    transition: background 0.3s ease;
+  }
+   */

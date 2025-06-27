@@ -1,0 +1,53 @@
+/* src/assets/css/EnpRegistration.css */
+
+.enp-page {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .enp-form {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .enp-form h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .enp-form .form-control,
+  .enp-form .form-select {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .enp-form .form-control:focus {
+    border-color: #88d8b0;
+    box-shadow: 0 0 8px #88d8b0;
+  }
+  
+  .enp-form .btn-success {
+    border-radius: 12px;
+    font-weight: 600;
+    background: #388e3c;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  
+  /* .enp-form .btn-success:hover {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+  } */
+  
+  /* .enp-form .register .btn-success {
+    background: #00796b;
+  }
+   */
+  /* .enp-form .register .btn-success:hover {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+  }
+   */

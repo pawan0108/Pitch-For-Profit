@@ -1,0 +1,177 @@
+body {
+    background-color: #f5f5f5; /* Modern Light Gray */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .profile-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-left {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .profile-image-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #ddd;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .investor-name {
+    margin-top: 1rem;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .investor-role {
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 1.5rem;
+  }
+  
+  .basic-info p {
+    margin: 0.5rem 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .profile-right {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .info-box {
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .info-box h3 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .info-box p {
+    color: #555;
+    margin: 0.3rem 0;
+  }
+  
+  .loading-text {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 24px;
+    color: #888;
+  }
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .edit-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cancel-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .deactivated-message {
+    text-align: center;
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+
+  .subscribe-warning {
+    background-color: #e8f5e9;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 60px auto;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.subscribe-warning h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

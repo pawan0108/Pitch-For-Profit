@@ -1,0 +1,139 @@
+/* Sidebar Section */
+.sidebar {
+    background: linear-gradient(1deg, #c0f3c8);
+    color: black;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    /* top: 100px; adjust kiya because topbar aur title hai */
+    transition: all 0.1s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    margin-top:5px ;
+  }
+  
+  .top_section {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .bars {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .menu_items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: black;
+  }
+  
+  .menu_item {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.1s ease;
+  }
+  .active-link {
+    background-color: #259e2b; /* Bootstrap Blue */
+    color: white;
+    border-radius: 8px;
+    padding-left: 10px;
+  }
+  
+  .menu_item {
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu_item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 12px;
+  }
+
+  
+
+
+  
+  /* Topbar */
+  .topbar {
+    height: 150px;
+    width: 100%;
+    background: #c0f3c8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  
+  /* Left */
+  .topbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Center */
+  .topbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Right */
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Logo Image (left me) */
+  .logo-img {
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 15px;
+  }
+  
+  /* Notification Badge */
+  .notification {
+    position: relative;
+  }
+  
+  .badge {
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+  }
+  
+  /* Profile Picture */
+  .profile-img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  
+/* Logo */
+

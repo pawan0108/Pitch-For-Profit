@@ -1,0 +1,52 @@
+/* InvestorManage.css */
+
+.animated-card {
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .animated-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .animated-btn {
+    transition: all 0.3s ease;
+  }
+  
+  .animated-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  .approve{
+    background-color: green;
+  }
+
+  .approve:hover{
+     background-color: green;
+  }
+
+  /* In your InvestorManage.css or global styles */
+.dataTables_wrapper {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.dataTables_paginate .paginate_button {
+  margin: 0 2px;
+  padding: 6px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  color: #333 !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+  background-color: #007bff;
+  color: white !important;
+}

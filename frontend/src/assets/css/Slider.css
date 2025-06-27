@@ -1,0 +1,16 @@
+.slider-img {
+ 
+    object-fit: cover;
+    display: block;
+      width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+    margin: 0 auto;     /* maintains aspect ratio and crops overflow */
+  }
+
+  .image-container{
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  }
