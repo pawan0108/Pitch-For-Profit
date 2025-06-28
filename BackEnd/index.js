@@ -3,30 +3,32 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const enpRouter = require('./Routes/enpRouter');
 const investorRouter = require('./Routes/investorRouter');
-const newsRouter = require('./Routes/newsRouter');   // News API route
-const eventRouter = require('./Routes/eventRouter'); // Events API route
+const newsRouter = require('./Routes/newsRouter');        // News API route
+const eventRouter = require('./Routes/eventRouter');     // Events API route
 const adminRouter = require('./Routes/adminRouter');
 const paymentRouter = require('./Routes/paymentRouter');
-const path = require('path'); // 🔧 REQUIRED for file path resolution
+const path = require('path');                             // 🔧 REQUIRED for file path resolution
 const meetingRoutes = require('./Routes/meetingRoutes'); // adjust path if needed
 const contactRouter = require('./Routes/contactRouter');
 
-
-
+// const fileUpload = require('express-fileupload');
 
 const app = express();
 const port = 8000;
 
-mongoose.connect('mongodb+srv://pawanmaurya979452:Pawan%401999@cluster0.bdx1flu.mongodb.net/PitchForProfit')
+mongoose.connect('mongodb+srv://pawanmaurya979452:Pawan%401999@cluster0.bdx1flu.mongodb.net/PitchForProfit');
 console.log("MongoDB Connected");
-
 
 app.use(cors());
 app.use(express.json());
 
+// app.use(fileUpload({
+//     useTempFiles:true
+// }))
+
 //Entrepreneur Router
 app.use('/entrepreneur', enpRouter);
-// app.use('/enp', enpRouter);
+
 app.use('/api/enp', enpRouter);   
 //Investor Router
 app.use('/investor', investorRouter);
@@ -49,6 +51,7 @@ app.use('/api/admin', adminRouter);
 const pitchRouter = require('./Routes/pitchRouter'); 
 app.use('/pitches', pitchRouter);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 // Metting
 // app.use('/api/investor', require('./Routes/investorRouter'));

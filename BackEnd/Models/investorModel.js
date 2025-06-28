@@ -14,6 +14,9 @@ var investorSchema = mongoose.Schema({
     email: String,
     regdate: Date,
     password: String,
+  photoPublicId: {
+    type : String
+  },
     photo: {
         type: String // ✅ this is critical for saving photo URL
       },

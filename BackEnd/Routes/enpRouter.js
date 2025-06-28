@@ -3,6 +3,13 @@ const enpModel = require('../Models/enpModel');
 const enpRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
+const cloudinary = require('cloudinary').v2;
+
+   cloudinary.config({ 
+        cloud_name: 'dlntlyjrl', 
+        api_key: '943155598194592', 
+        api_secret: 'fjb2lwVqzuvTT9jEsS-4mkKNcFQ'
+    });
 
 // ✅ Multer setup
 const storage = multer.diskStorage({
@@ -17,29 +24,45 @@ enpRouter.put('/:id', upload.single('photo'), async (req, res) => {
     const entrepreneurId = req.params.id;
     const updateData = { ...req.body };
 
-    // ✅ Add photo if file uploaded
-    if (req.file) {
-      updateData.photo = `http://localhost:8000/uploads/${req.file.filename}`;
+    // ✅ Get existing entrepreneur
+    const existingEnp = await enpModel.findById(entrepreneurId);
+    if (!existingEnp) {
+      return res.status(404).json({ message: 'Entrepreneur not found' });
     }
 
-    // ✅ Update and return latest data
+    // ✅ If new photo uploaded
+    if (req.file) {
+      // 🗑️ Delete old photo if exists
+      if (existingEnp.photoPublicId) {
+        await cloudinary.uploader.destroy(existingEnp.photoPublicId);
+      }
+
+      // ✅ Upload new photo
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        folder: 'pitch_for_profit/entrepreneurs'
+      });
+
+      updateData.photo = result.secure_url;
+      updateData.photoPublicId = result.public_id;
+    }
+
+    // ✅ Update MongoDB
     const updatedEnp = await enpModel.findByIdAndUpdate(
       entrepreneurId,
       updateData,
       { new: true }
     );
 
-    if (!updatedEnp) {
-      return res.status(404).json({ message: 'Entrepreneur not found' });
-    }
+    res.json({
+      message: 'Entrepreneur updated successfully',
+      entrepreneur: updatedEnp
+    });
 
-    res.json({ message: 'Entrepreneur updated successfully', entrepreneur: updatedEnp });
   } catch (error) {
     console.error('Update error:', error);
     res.status(500).json({ message: 'Internal Server Error' });
   }
 });
-
 
 // 👉 Search route
 enpRouter.get('/search', async (req, res) => {
